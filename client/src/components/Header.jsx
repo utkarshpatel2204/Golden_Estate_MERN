@@ -12,7 +12,7 @@ export default function Header() {
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('searchTerm', searchTerm);
     const searchQuery = urlParams.toString();
-    navigate(`/search?${searchQuery}`);
+    navigate(`${process.env.REACT_APP_API_URL}/search?${searchQuery}`);
   };
 
   useEffect(() => {

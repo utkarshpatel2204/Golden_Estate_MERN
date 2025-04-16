@@ -36,7 +36,7 @@ export default function CreateListing() {
   useEffect(() => {
     const fetchListing = async () => {
       const listingId = params.listingId;
-      const res = await fetch(`/api/listing/get/${listingId}`);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/listing/get/${listingId}`);
       const data = await res.json();
       if (data.success === false) {
         console.log(data.message);

@@ -18,12 +18,7 @@ mongoose
   });
 
   const __dirname = path.resolve();
-  const cors = require("cors");
 
-  app.use(cors({
-    origin: "http://localhost:5173", // your frontend URL
-    credentials: true
-  }));
 const app = express();
 
 app.use(express.json());
